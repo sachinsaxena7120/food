@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* body {
+        background-color: #000;
+      }
+      #mainContainer {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(100%);
+        transition: 0.5s;
+      }
+      #mainContainer.mainClass {
+        transform: translateY(0);
+      }
+      .innerContainer {
+        width: 450px;
+        height: 450px;
+        background-color: rgb(255, 255, 255);
+      } */
+
+      .mainContainer {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgb(101, 0, 233), rgb(0, 229, 255));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .inputContainer {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      .inputContainer input {
+        outline: none;
+        border: none;
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        padding: 10px;
+        border-bottom: 5px solid rgb(99, 96, 2);
+      }
+      .buttonContainer {
+        margin-top: 20px;
+      }
+      .btn {
+        padding: 10px 30px;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <h1 id="OurValue">Our Output Is: Null</h1>
+        <div class="inputContainer">
+          <input
+            type="number"
+            id="value1"
+            placeholder="Enter Your First Number"
+          />
+          <input
+            type="number"
+            id="value2"
+            placeholder="Enter Your Second Number"
+          />
+        </div>
+        <div class="buttonContainer">
+          <button class="btn" onclick="add()">Add</button>
+          <button class="btn" onclick="minus()">Minus</button>
+          <button class="btn" onclick="mult()">mult</button>
+          <button class="btn" onclick="div()">Div</button>
+        </div>
+      </div>
+</body>
+<script>
+    // console.log(this);
+
+// let a = {
+//   myName: "fgbhnjmk",
+//   email: "Xyz@gmail.com",
+//   password: "123456",
+//   testValue: function () {
+//     return this.myName;
+//   },
+// };
+
+// let b = a.testValue();
+
+// console.log(b);
+
+// let a = document.querySelector("#mainContainer");
+
+// function myFunc() {
+//   a.classList.toggle("mainClass");
+// }
+
+let value1 = document.getElementById("value1");
+let value2 = document.getElementById("value2");
+let OurValue = document.getElementById("OurValue");
+
+function add() {
+  let sum = parseInt(value1.value) + parseInt(value2.value);
+  OurValue.innerHTML = "Our Output Is: " + sum;
+}
+
+function minus() {
+  let sum = parseInt(value1.value) - parseInt(value2.value);
+  OurValue.innerHTML = "Our Output Is: " + sum;
+}
+
+function mult() {
+  let sum = parseInt(value1.value) * parseInt(value2.value);
+  OurValue.innerHTML = "Our Output Is: " + sum;
+}
+
+function div() {
+  let sum = parseInt(value1.value) / parseInt(value2.value);
+  OurValue.innerHTML = "Our Output Is: " + sum;
+}
+
+
+let str = "hello world keshe he aap";
+let position = str.indexOf('aap');
+console.log(position);
+
+</script>
+</html>
